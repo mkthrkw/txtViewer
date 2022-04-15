@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.css" rel="stylesheet">
+    <link href="viewer.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+
+
+  <body>
+
+<!-- ================================================
+                    header
+================================================= -->
+    <header>
+      <nav class="level is-mobile px-3 has-background-info-dark">
+
+        <!-- home icon -->
+        <div class="level-item">
+          <a class="has-text-warning is-size-6" href="">
+            Viewer
+            <i class="fas fa-glasses"></i>
+          </a>
+        </div>
+
+        <!-- code -->
+        <div class="level-item has-text-centered">
+          <form class="is-grouped-multiline pb-3">
+            <div>
+              <label for="selectBox" id="select-label" class="is-size-7 mr-1">UniCode</label>
+            </div>
+            <div id="selectBox" class="select is-rounded is-small">
+              <select id="UniCode">
+                <option>Shift_JIS</option>
+                <option>EUC-JP</option>
+                <option>UTF-8</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- row num -->
+        <div class="level-item has-text-centered">
+          <form class="is-grouped-multiline pb-3">
+            <div>
+              <label for="selectBox" id="select-label" class="is-size-7 mr-1">Row-Num</label>
+            </div>
+            <div id="selectBox" class="select is-rounded is-small">
+              <select id="Row-Num">
+                <option>なし</option>
+                <option>0から</option>
+                <option>1から</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- column num -->
+        <div class="level-item has-text-centered">
+          <form class="is-grouped-multiline pb-3">
+            <div>
+              <label for="selectBox" id="select-label" class="is-size-7 mr-1">Col-Num</label>
+            </div>
+            <div id="selectBox" class="select is-rounded is-small">
+              <select id="Col-Num">
+                <option>なし</option>
+                <option>0から</option>
+                <option>1から</option>
+
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- split key -->
+        <div class="level-item has-text-centered">
+          <form class="is-grouped-multiline pb-3">
+            <div>
+              <label for="selectBox" id="select-label" class="is-size-7 mr-1">SplitKey</label>
+            </div>
+            <div id="selectBox" class="select is-rounded is-small">
+              <select id="SplitKey">
+                <option>カンマ</option>
+                <option>タブ</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- search box -->
+        <div class="level-item has-text-centered">
+          <div id="search-field" class="field has-addons">
+            <p class="control">
+              <input class="input is-small" type="text" placeholder="🔍検索ワードを入力">
+            </p>
+            <p class="control">
+              <button class="button is-small">
+                <i class="fas fa-search"></i>
+              </button>
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!-- ================================================
+                    main
+================================================= -->
+
+    <main class="main section">
+
+      <div class="container">
+        <div class="importBox"><p>☞ ここにファイルをドラッグ＆ドロップしてください ☜</p></div>
+        <div class="data-open-area"><p>ここにデータが出力されます</p></div>
+        <div class="reset-btn"><button class='button'>Reset</button></div>
+      </div>
+
+
+    </main>
+
+<!-- ================================================
+                    footer
+================================================= -->
+
+    <footer class="footer level is-mobile py-1 has-background-info-dark">
+      <div class="content level-item has-text-warning">
+        <p>Created by mkthrkw</p>
+      </div>
+    </footer>
+
+<!-- ================================================
+                  javascript
+================================================= -->
+
+    <script src="viewer.js"></script>
+
+<!-- ================================================
+                      End
+================================================= -->
+
+  </body>
+</html>
